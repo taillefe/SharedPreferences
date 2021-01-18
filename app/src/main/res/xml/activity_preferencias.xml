@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:key="categoría1"
+        android:title="Permite cambiar los datos personales">
+        <CheckBoxPreference
+            android:key="opcion1"
+            android:title="Datos"
+            android:summary="Esta opción habilita el cambio de los datos personales"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+    <PreferenceCategory
+
+        android:key="categoria2"
+        android:title="Datos personales">
+        <ListPreference
+            android:key="genero"
+            android:title="Genero"
+            android:summary="Selecciona el género"
+            android:dialogTitle="Indicar género"
+            android:entries="@array/genero"
+            android:entryValues="@array/codigogenero" />
+
+       <ListPreference
+            android:key="pais"
+            android:title="País"
+            android:summary="Selecciona el país"
+            android:dialogTitle="Indicar país"
+            android:entries="@array/pais"
+            android:entryValues="@array/codigopais" />
+
+        <EditTextPreference
+            android:key="edad"
+            android:title="Edad"
+            android:summary="Introducir la edad"
+            android:dialogTitle="Introduce valor" />
+    </PreferenceCategory>
+
+</PreferenceScreen>
