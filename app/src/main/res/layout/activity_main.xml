@@ -7,6 +7,7 @@
     android:background="@drawable/humo3"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/txtNombre"
         android:layout_width="129dp"
