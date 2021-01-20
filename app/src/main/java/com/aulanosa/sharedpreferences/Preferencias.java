@@ -37,19 +37,22 @@ public class Preferencias extends PreferenceActivity {
                 Context.MODE_PRIVATE);
 
         boolean opcion = ((CheckBoxPreference)findPreference("opcion1")).isChecked();
-      //  String mostrar = "la opcion es " + opcion;
-      //  Toast. makeText ( getApplicationContext (), mostrar , Toast . LENGTH_LONG ). show ();
+       // String mostrar = "la opcion es " + opcion;
+       // Toast. makeText ( getApplicationContext (), mostrar , Toast . LENGTH_LONG ). show ();
         String txtGenero = ((ListPreference)findPreference("genero")).getEntry().toString();
         String txtPais = ((ListPreference)findPreference("pais")).getEntry().toString();
         String txtEdad = ((EditTextPreference)findPreference("edad")).getText();
-        String mostrar = "genero " + txtGenero;
-        Toast. makeText ( getApplicationContext (), mostrar , Toast . LENGTH_LONG ). show ();
+       // String mostrar = "genero " + txtGenero;
+       // Toast. makeText ( getApplicationContext (), mostrar , Toast . LENGTH_LONG ). show ();
         SharedPreferences.Editor editor = preferencias.edit();
         editor.putString("genero", txtGenero);
         editor.putString("pais", txtPais);
         editor.putString("edad", txtEdad);
+        if (opcion == true){
+            editor.commit();
+        }
 
-        editor.commit();
+
       /*
         Context contexto = getApplicationContext();
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(contexto);
